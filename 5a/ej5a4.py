@@ -96,16 +96,31 @@ Exemple:
 
 # Write class DatabaseConnector here
 
+class DatabaseConnector:
+    def __init__(self):
+        self.database = None
+    
+    def connect(self, database):
+        self.database = database
+        database.connected = True
+
+
 # Write class SQLDatabase here
+
+class SQLDatabase:
+    def __init__(self):
+        self.connected = False
 
 
 # Write class PostgresDatabase here
 
+class PostgresDatabase:
+    def __init__(self):
+        self.connected = False
 
 # Write class RedshiftDatabase here
 
-
-# Por la propia naturaleza del ejercicios no se puede probar imprimiendo por pantalla, 
-# revisa los tests para revisar la corrección de tu propuesta de solución
-# Per la pròpia naturalesa de l'exercicis no es pot provar imprimint per pantalla, 
-# revisa els tests per a revisar la correcció de la teva proposta de solució
+class RedshiftDatabase:
+    def __init__(self):
+        self.connected = False
+      
